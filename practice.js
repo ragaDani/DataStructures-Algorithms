@@ -4,3 +4,4 @@ function a(){
     return 10;
 };
 console.log(a());
+
