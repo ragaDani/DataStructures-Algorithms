@@ -6,11 +6,11 @@ class Node {
 }
 class LinkedList {
     constructor(value) {
-        //this.head = new Node(value);
-        this.head = {
-            value: value,
-            next: null
-        }
+        this.head = new Node(value);
+        // this.head = {
+        //     value: value,
+        //     next: null
+        // }
         this.tail = this.head;
         this.length = 1;
     }
@@ -67,6 +67,42 @@ class LinkedList {
         }
         return this;
     }
+    reverseNSqr(){ // This function using O(n^2) time and O(n) space to reversee a list. 
+        if(!this.head.next){
+            return this.head;
+        }
+        let len = this.length;
+        let index = len;
+        const newList = new LinkedList(this.tail.value);
+        for(let i=1;i<len;i++)
+        {   let currentNode = this.head;
+            let counter = 1;
+            while(counter < index -1){
+                currentNode = currentNode.next;
+                counter++;
+            }
+            newList.append(currentNode.value);
+            index--;
+        }
+        return newList;
+    }
+    reverse() {
+        if(!this.head.next){
+            return this.head;
+        }
+        let first = this.head;
+        this.tail = this.head;
+        let second = first.next;
+        while(second){
+            const temp = second.next;
+            second.next = first;
+            first = second;
+            second = temp;
+        }
+        this.head.next = null;
+        this.head = first;
+        return this;
+    }
 }
 
 const myLinkedList = new LinkedList(10);
@@ -78,4 +114,5 @@ myLinkedList.insert(3,88);
 console.log(myLinkedList.printList());
 myLinkedList.remove(4);
 console.log(myLinkedList.printList());
-//console.log(myLinkedList);
+const newList = myLinkedList.reverse();
+console.log(newList.printList());
