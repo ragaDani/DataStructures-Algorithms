@@ -1,9 +1,4 @@
-class Node {
-    constructor(value) {
-        this.value = value;
-        this.next = null;
-    }
-}
+const Node = require("./nodebuild");
 class LinkedList {
     constructor(value) {
         this.head = new Node(value);
@@ -105,14 +100,4 @@ class LinkedList {
     }
 }
 
-const myLinkedList = new LinkedList(10);
-myLinkedList.append(5);
-myLinkedList.append(16);
-myLinkedList.append(19);
-myLinkedList.prepend(55);
-myLinkedList.insert(3,88);
-console.log(myLinkedList.printList());
-myLinkedList.remove(4);
-console.log(myLinkedList.printList());
-const newList = myLinkedList.reverse();
-console.log(newList.printList());
+module.exports = LinkedList;

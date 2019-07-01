@@ -71,13 +71,4 @@ class DoubleLinkedList {
         return this;
     }
 }
-var myDLL = new DoubleLinkedList(10);
-myDLL.append(12);
-myDLL.prepend(15);
-console.log(myDLL.printList());
-myDLL.insert(2,56);
-myDLL.insert(3,44);
-myDLL.prepend(8);
-myDLL.remove(2);
-console.log(myDLL.printList());
-console.log(myDLL);
+module.exports = DoubleLinkedList;
