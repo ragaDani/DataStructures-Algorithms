@@ -6,7 +6,7 @@ class Queue {
         this.length = 0;
     }
     peek() {
-        return this.last;
+        return this.first;
     }
     enqueue(value) {
         const newNode = new Node(value);
@@ -16,10 +16,8 @@ class Queue {
           
         }
         else {
-            const holdingPointer = this.last;
-            newNode.next = this.last;
+            this.last.next = newNode;
             this.last = newNode;
-            this.first.next = holdingPointer;
         }
         this.length++;
         return this;
@@ -29,8 +27,12 @@ class Queue {
             return null;
         }
         const holdingPointer = this.first;
-         
-
+        this.first = this.first.next;
+        this.length--;
+        if(this.length ===0){
+            this.last = null;
+        }
+        return this;
     }
 }
 module.exports = Queue;
