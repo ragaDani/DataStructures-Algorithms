@@ -4,13 +4,17 @@ class arrayStack {
         this.length = this.stack.length;
     }
     peek(){
-        return this.stack[0];
+        return this.stack[this.length-1];
     }
     push(value) {
-        return this.stack.push();
+        this.stack.push(value);
+        this.length++;
+        return this;
     }
     pop() {
-        return this.stack.pop();
+        this.stack.pop();
+        this.length--;
+        return this;
     }
 }
 module.exports = arrayStack;
