@@ -1,9 +1,3 @@
-console.log("hello there");
-
-function a(){
-    return 10;
-};
-console.log(a());
-
-console.log("published branch");
-
+var pog;
+console.log(pog);
+pog = 'poggers'
