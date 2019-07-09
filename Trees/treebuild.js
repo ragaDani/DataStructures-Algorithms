@@ -72,6 +72,7 @@ class BinarySearchTree{
                         if(currentNode.value < parentNode.value){
                             parentNode.left = currentNode.left;
                         }
+                        //if parent<current value, make left child a right child of parent
                         else if(currentNode.value>parentNode.value){
                             parentNode.right = currentNode.left;
                         }
