@@ -101,8 +101,9 @@ class BinarySearchTree{
                         leftmostParent = leftmost;
                         leftmost = leftmost.left;
                     }
-                    // Parent's left subtree is now leftmost's right subtree
+                    // leftmostParent's left subtree is now leftmost's right subtree
                     leftmostParent.left = leftmost.right;
+                    // Now we prepare for the removal of currentNode
                     leftmost.left = currentNode.left;
                     leftmost.right = currentNode.right;
 
