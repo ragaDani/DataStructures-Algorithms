@@ -1,5 +1,5 @@
 class Fibonacci{
-    findFibonacciRecursive(number){
+    findFibonacciRecursive(number){ //O(2^n)
         // Build a fibonacci function using recursion
         if(number == 1){
             return 1;
@@ -10,7 +10,7 @@ class Fibonacci{
         return (this.findFibonacciRecursive(number-1) + this.findFibonacciRecursive(number-2));
     }
     
-    findFibonacciIterative(number){
+    findFibonacciIterative(number){ // O(n)
         // Build a fibonacci function using iteration
         let previousFibonnaci = 0;
         let fibonacci = 1;
