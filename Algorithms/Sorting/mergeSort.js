@@ -13,19 +13,19 @@ function mergeSort(array){
 function merge(left, right){
     // logic to compare and merge
     let newArray = [];
-    for(let i in left){
-        for(let j in right){
-            if(left[i]<right[j]){
-                newArray.push(left[i]);
-                continue;
-            }
-            else{
-                newArray.push(right[j]);
-                continue;
-            }
+    let leftIndex = 0;
+    let rightIndex = 0;
+    while(leftIndex<left.length && rightIndex<right.length){
+        if(left[leftIndex]<right[rightIndex]){
+            newArray.push(left[leftIndex]);
+            leftIndex++;
+        } else{
+            newArray.push(right[rightIndex]);
+            rightIndex++;
         }
-        console.log(newArray);
     }
-    return newArray;
+
+    console.log(newArray);
+    return newArray.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
 }
 module.exports = mergeSort;

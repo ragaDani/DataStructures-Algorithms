@@ -14,6 +14,6 @@ function isSorted(inArray){
     
 }
 
-isSorted(mergeSort(array));
+isSorted(mergeSort(newArray));
 // console.log(bubbleSort(array));
 
