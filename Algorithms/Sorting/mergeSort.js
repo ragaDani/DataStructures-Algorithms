@@ -5,8 +5,8 @@ function mergeSort(array){
     // Split Array into right and left
     let left = array.slice(0,array.length/2);
     let right = array.slice(array.length/2,array.length);
-    console.log('left:',left);
-    console.log('right',right);
+    // console.log('left:',left);
+    // console.log('right',right);
     
     return merge(mergeSort(left),mergeSort(right));
 }
@@ -25,7 +25,7 @@ function merge(left, right){
         }
     }
 
-    console.log(newArray);
+    // console.log(newArray);
     return newArray.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
 }
 module.exports = mergeSort;
