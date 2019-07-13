@@ -19,7 +19,7 @@ function merge(left, right){
         if(left[leftIndex]<right[rightIndex]){
             newArray.push(left[leftIndex]);
             leftIndex++;
-        } else{
+        } else{ 
             newArray.push(right[rightIndex]);
             rightIndex++;
         }
