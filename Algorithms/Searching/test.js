@@ -9,5 +9,5 @@ let value2 = 10;
 // Testing linearSearch - Confirmed
 console.log(linearSearch(list,value1));
 
-// Testing binarySearch - WIP
+// Testing binarySearch - Confirmed
 console.log(binarySearch(list,value2));
