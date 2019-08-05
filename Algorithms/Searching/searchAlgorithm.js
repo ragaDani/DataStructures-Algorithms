@@ -1,9 +1,10 @@
 function linearSearch(list,value){
     for(i in list){
-        if(list[i] == value){
-            return list[i];
+        if(list[i] === value){
+            return true;
         }
     }
+    return false;
 }
 
 function binarySearch(list,value){
@@ -11,9 +12,9 @@ function binarySearch(list,value){
     if(list !== undefined){
     var highIndex = list.length;
     }
-    
-    while(lowIndex<highIndex){
-        let mid = Math.floor((highIndex + lowIndex)/2);
+    let mid = 0;
+    while(mid >= 0 && mid < list.length-1){
+        mid = Math.floor((highIndex + lowIndex)/2);
         if(value < list[mid]){
             highIndex = mid;
         }
@@ -23,6 +24,7 @@ function binarySearch(list,value){
         else if(value === list[mid]){
             return list[mid];
         }
+        
     }
     return false;
 }
