@@ -7,4 +7,5 @@ myTree.insert(11);
 myTree.insert(9);
 myTree.remove(100);
 console.log(myTree);
+console.log(myTree.breadthFirstSearch())
 //console.log(myTree.lookup(9));
