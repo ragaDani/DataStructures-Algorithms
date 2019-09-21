@@ -8,4 +8,7 @@ myTree.insert(9);
 myTree.remove(100);
 console.log(myTree);
 console.log(myTree.breadthFirstSearch())
+console.log('DFSpre', myTree.DFSPreOrder());
+console.log('DFSin', myTree.DFSInOrder());
+console.log('DFSpost', myTree.DFSPostOrder());
 //console.log(myTree.lookup(9));
